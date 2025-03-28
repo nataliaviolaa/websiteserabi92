@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lampiran - Dokumentasi & Struk</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Grandstander:ital,wght@0,100..900;1,100..900&family=Lexend+Deca:wght@100..900&family=Londrina+Solid:wght@100;300;400;900&family=Mochiy+Pop+One&family=Pangolin&family=Preahvihear&family=Spicy+Rice&display=swap" rel="stylesheet">
+  <style>
+    /* Contoh CSS sederhana (ambil sebagian dari style.css yang sudah dikirim) */
+    body {
+      margin: 0;
+      padding: 0;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+      background-image: url(bg.gif);
+      background-size: cover;
+      background-repeat: no-repeat;
+      text-align: center;
+      font-family: "Lexend Deca", sans-serif;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    nav {
+      margin: 20px auto;
+      background-color: #A7D7A7;
+      padding: 15px 30px;
+      border-radius: 50px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      white-space: nowrap;
+      opacity: 1;
+    }
+    nav a {
+      color: #4B6043;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s ease-in-out;
+    }
+    nav a:hover {
+      color: #d0f4d0;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown .content {
+      display: none;
+      position: absolute;
+      background-color: #D7E7C9;
+      min-width: 200px;
+      border-radius: 10px;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      overflow: hidden;
+    }
+    .dropdown .content a {
+      color: #2F4F2F;
+      padding: 12px 16px;
+      display: block;
+      text-align: left;
+      transition: background-color 0.3s ease;
+    }
+    .dropdown .content a:hover {
+      background-color: #9DC88D;
+      color: #ffffff;
+    }
+    .dropdown:hover .content {
+      display: block;
+    }
+    .section-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 40px 0 20px;
+      color: #3D2907;
+    }
+    .slideshow-container {
+      position: relative;
+      width: 300px;
+      height: 533px;
+      margin: 0 auto 40px;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .slides img {
+      width: 300px;
+      height: 533px;
+      object-fit: cover;
+    }
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      border-radius: 50%;
+      font-size: 1.5rem;
+    }
+    .prev { left: 10px; }
+    .next { right: 10px; }
+    .prev:hover, .next:hover {
+      background: rgba(0, 0, 0, 0.7);
+    }
+    .progress-bar {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 2px;
+    }
+    .progress {
+      height: 100%;
+      width: 0;
+      background: white;
+      transition: width 3s linear;
+    }
+    .photo-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px auto;
+    }
+    .photo-container img {
+      width: 150px;
+      height: auto;
+      border: 3px solid #d4a373;
+      border-radius: 10px;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    .photo-container img:hover {
+      transform: scale(1.5);
+      box-shadow: 5px 5px 15px rgba(193, 11, 72, 0.2);
+    }
+    .back-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 10px 15px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <a class="logo-container" href="index.html">
+      <img src="Screenshot_2025-02-14_122525-removebg-preview.png" alt="Home.png">
+      <div class="overlay">Home</div>
+    </a>
+    <a class="q" href="abstrak.html">Abstract</a>
+    <div class="dropdown">
+      <a class="q" href="pendahuluan.html">Pendahuluan</a>
+      <div class="content">
+        <a href="pendahuluan.html#latar-belakang">Latar Belakang</a>
+        <a href="pendahuluan.html#tujuan">Tujuan</a>
+        <a href="pendahuluan.html#manfaat">Manfaat</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="q" href="produksi.html">Rencana Kegiatan</a>
+      <div class="content">
+        <a href="produksi.html">Perencanaan Produksi</a>
+        <a href="promosi.html">Perencanaan Promosi</a>
+        <a href="booth.html">Perencanaan Booth</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="q" href="hasilkegiatan.html">Hasil Kegiatan</a>
+      <div class="content">
+        <a href="hasilkegiatan.html#laporanpelaksanaan">Laporan Pelaksanaan</a>
+        <a href="hasilkegiatan.html#laporankeuangan">Laporan Keuangan</a>
+        <a href="hasilkegiatan.html#statistik">Statistik Jualan</a>
+        <a href="hasilkegiatan.html#bioteknologi">Video Bioteknologi</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="q" href="refleksi.html">Refleksi Kegiatan</a>
+      <div class="content">
+        <a href="refleksi.html#agama">Refleksi Agama</a>
+        <a href="refleksi.html#ppkn">Refleksi PPKn</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="q" href="penutup.html">Penutup</a>
+      <div class="content">
+        <a href="penutup.html#kesimpulan">Kesimpulan</a>
+        <a href="penutup.html#saran">Saran</a>
+        <a href="penutup.html#daftarpustaka">Daftar Pustaka</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="q" href="lampiran.html">Lampiran</a>
+      </div>
+    </div>
+    <a class="q" href="ppt.html">PPT</a>
+  </nav>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f0e5;
+        text-align: center;
+    }
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 20px;
+    }
+    .gallery img {
+        width: 250px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+    .gallery img:hover {
+        transform: scale(1.1);
+    }
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+    }
+    .modal img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 10px;
+    }
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <div class="pendahuluan-teks">
+        <h1>✮⋆˙ Lampiran ✮⋆˙</h1>
+        </div>
+<div class="gallery">
+    <img src="dokumentasi proses 1.jpg" alt="Gambar 1" onclick="openModal(this.src)">
+    <img src="dokumentasi proses 2.jpg" alt="Gambar 2" onclick="openModal(this.src)">
+    <img src="dokumentasi proses 3.jpg" alt="Gambar 3" onclick="openModal(this.src)">
+    <img src="foto1.jpg" alt="Gambar 4" onclick="openModal(this.src)">
+    <img src="foto2.jpg" alt="Gambar 4" onclick="openModal(this.src)">
+    <img src="foto3.jpg" alt="Gambar 4" onclick="openModal(this.src)">
+    <img src="foto4.jpg" alt="Gambar 4" onclick="openModal(this.src)">
+    <img src="foto5.jpg" alt="Gambar 4" onclick="openModal(this.src)">
+    <img src="foto6.jpg" alt="Gambar 4" onclick="openModal(this.src)">
+</div>
+
+<div class="modal" id="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modal-img" src="" alt="">
+</div>
+
+<script>
+    function openModal(src) {
+        document.getElementById("modal").style.display = "flex";
+        document.getElementById("modal-img").src = src;
+    }
+    function closeModal() {
+        document.getElementById("modal").style.display = "none";
+    }
+</script>
+</body>
+</html>
