@@ -1108,8 +1108,8 @@ li:hover {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
     flex: 1;
-    width: 70%; /* Biar proporsional */
-    margin-right: -200px;
+    width: 90%; /* Biar proporsional */
+    margin-right: -250px;
 }
 
 /* Hover biar tambah menarik */
