@@ -1691,30 +1691,6 @@ video:hover {
     padding-left: 15px;
 }
 
-.usahaagama li {
-    background-color: rgba(215, 179, 140, 0.2);
-    padding: 12px;
-    border-radius: 6px;
-    margin-bottom: 8px;
-    list-style: none;
-    position: relative;
-    font-size: 18px;
-    transition: background-color 0.25s ease-in-out, transform 0.15s ease-in-out;
-}
-
-.usahaagama li::before {
-    content: "✔";
-    color: #6a4228;
-    font-weight: bold;
-    margin-right: 8px;
-}
-
-/* Hover Effect */
-.usahaagama li:hover {
-    background-color: rgba(144, 186, 131, 0.4); /* Warna hijau muda */
-    transform: scale(1.015);
-}
-
 /* AYAT: Efek Hover Lebih Smooth & Rapat */
 .ayat-container ul {
     list-style: none;
