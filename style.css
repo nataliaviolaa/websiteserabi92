@@ -1898,14 +1898,16 @@ video:hover {
 
 /* ===== Container Kesimpulan & Saran ===== */
 .container-kesimpulan,
-.container-saran {
+.container-saran,
+.prosedur-prakarya,
+.prosedur-biotech {
     max-width: 900px;
     margin: 20px auto;
     padding: 25px;
     background: #fffed0; /* Mustard yellow */
     border-radius: 15px;
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
-    text-align: left;
+    text-align: justify;
     transition: all 0.3s ease-in-out;
     font-family: "Pangolin", sans-serif;
     font-size: 18px;
@@ -1914,14 +1916,18 @@ video:hover {
 }
 
 .container-kesimpulan,
-.container-saran :hover {
+.container-saran,
+.prosedur-prakarya,
+.prosedur-biotech :hover {
     transform: translateY(-5px);
     box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 /* ===== Judul (h2) dengan Hover Effect ===== */
 .container-kesimpulan h2,
-.container-saran h2 {
+.container-saran h2,
+.prosedur-prakarya h2,
+.prosedur-biotech h2 {
     color: #3D550C; /* Forest green */
     border-bottom: 4px solid #3D550C;
     padding-bottom: 6px;
@@ -1931,27 +1937,31 @@ video:hover {
 }
 
 .container-kesimpulan h2:hover,
-.container-saran h2:hover {
+.container-saran h2:hover,
+.prosedur-prakarya h2:hover,
+.prosedur-biotech h2:hover {
     color: #FF5733; /* Warna berubah saat hover */
     transform: scale(1.05); /* Sedikit membesar */
 }
 
 /* ===== Paragraf ===== */
 .container-kesimpulan p,
-.container-saran p {
+.container-saran p, 
+.prosedur-prakarya p,
+.prosedur-biotech p {
     font-size: 16px;
     line-height: 1.6;
     text-align: justify;
     color: #333;
 }
 
-.container-saran ol {
+.container-saran ol, #teks-prosedur ol {
     margin-left: 20px;
     padding-left: 15px;
-    list-style-type: decimal;
 }
 
 .container-saran li {
+    text-align: left;
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 8px;
@@ -1962,7 +1972,7 @@ video:hover {
     box-shadow: none; /* Pastikan tidak ada shadow */
 }
 
-.container-saran li:hover {
+.container-saran li:hover, #teks-prosedur ol li:hover {
     background-color: #e6f4ea;
     transform: translateX(3px);
     box-shadow: none; /* Hilangkan shadow saat hover */
@@ -1974,6 +1984,35 @@ video:hover {
     font-weight: normal;
     color: #444;
     line-height: 1.6;
+}
+
+#teks-prosedur{
+    display: flex;
+}
+
+.prosedur-prakarya {
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 600px;
+}
+
+.prosedur-biotech {
+    margin-right: 20px;
+    max-width: 600px;
+}
+
+#teks-prosedur img {
+    margin-left: 20px;
+}
+
+#teks-prosedur ol li {
+    font-size: 15px;
+    margin-bottom: 8px;
+    background-color: #f8f8f8;
+    padding: 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: none; /* Pastikan tidak ada shadow */
 }
 
 .ppt-container {

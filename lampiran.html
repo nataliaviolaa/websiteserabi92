@@ -1,355 +1,391 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lampiran - Dokumentasi & Struk</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Grandstander:ital,wght@0,100..900;1,100..900&family=Lexend+Deca:wght@100..900&family=Londrina+Solid:wght@100;300;400;900&family=Mochiy+Pop+One&family=Pangolin&family=Preahvihear&family=Spicy+Rice&display=swap" rel="stylesheet">
-  <style>
-    /* Contoh CSS sederhana (ambil sebagian dari style.css yang sudah dikirim) */
-    body {
-      margin: 0;
-      padding: 0;
-      opacity: 0;
-      animation: fadeIn 2s forwards;
-      background-image: url(bg.gif);
-      background-size: cover;
-      background-repeat: no-repeat;
-      text-align: center;
-      font-family: "Lexend Deca", sans-serif;
-    }
-    @keyframes fadeIn {
-      to { opacity: 1; }
-    }
-    nav {
-      margin: 20px auto;
-      background-color: #A7D7A7;
-      padding: 15px 30px;
-      border-radius: 50px;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 15px;
-      white-space: nowrap;
-      opacity: 1;
-    }
-    nav a {
-      color: #4B6043;
-      font-weight: bold;
-      text-decoration: none;
-      transition: color 0.3s ease-in-out;
-    }
-    nav a:hover {
-      color: #d0f4d0;
-    }
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-    .dropdown .content {
-      display: none;
-      position: absolute;
-      background-color: #D7E7C9;
-      min-width: 200px;
-      border-radius: 10px;
-      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
-      overflow: hidden;
-    }
-    .dropdown .content a {
-      color: #2F4F2F;
-      padding: 12px 16px;
-      display: block;
-      text-align: left;
-      transition: background-color 0.3s ease;
-    }
-    .dropdown .content a:hover {
-      background-color: #9DC88D;
-      color: #ffffff;
-    }
-    .dropdown:hover .content {
-      display: block;
-    }
-    .section-title {
-      font-size: 24px;
-      font-weight: bold;
-      margin: 40px 0 20px;
-      color: #3D2907;
-    }
-    .slideshow-container {
-      position: relative;
-      width: 300px;
-      height: 533px;
-      margin: 0 auto 40px;
-      overflow: hidden;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-    .slides {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-    }
-    .slides img {
-      width: 300px;
-      height: 533px;
-      object-fit: cover;
-    }
-    .prev, .next {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(0, 0, 0, 0.5);
-      color: white;
-      padding: 10px;
-      border: none;
-      cursor: pointer;
-      border-radius: 50%;
-      font-size: 1.5rem;
-    }
-    .prev { left: 10px; }
-    .next { right: 10px; }
-    .prev:hover, .next:hover {
-      background: rgba(0, 0, 0, 0.7);
-    }
-    .progress-bar {
-      position: absolute;
-      top: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80%;
-      height: 4px;
-      background: rgba(255, 255, 255, 0.5);
-      border-radius: 2px;
-    }
-    .progress {
-      height: 100%;
-      width: 0;
-      background: white;
-      transition: width 3s linear;
-    }
-    .photo-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      margin: 20px auto;
-    }
-    .photo-container img {
-      width: 150px;
-      height: auto;
-      border: 3px solid #d4a373;
-      border-radius: 10px;
-      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    }
-    .photo-container img:hover {
-      transform: scale(1.5);
-      box-shadow: 5px 5px 15px rgba(193, 11, 72, 0.2);
-    }
-    .back-button {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      background: rgba(0, 0, 0, 0.6);
-      color: white;
-      padding: 10px 15px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-size: 1rem;
-      font-weight: bold;
-    }
-  </style>
-</head>
-<body>
-  <!-- Navigation Bar -->
-  <nav>
-    <a class="logo-container" href="index.html">
-      <img src="Screenshot_2025-02-14_122525-removebg-preview.png" alt="Home.png">
-      <div class="overlay">Home</div>
-    </a>
-    <a class="q" href="abstrak.html">Abstract</a>
-    <div class="dropdown">
-      <a class="q" href="pendahuluan.html">Pendahuluan</a>
-      <div class="content">
-        <a href="pendahuluan.html#latar-belakang">Latar Belakang</a>
-        <a href="pendahuluan.html#tujuan">Tujuan</a>
-        <a href="pendahuluan.html#manfaat">Manfaat</a>
-      </div>
-    </div>
-    <div class="dropdown">
-      <a class="q" href="produksi.html">Rencana Kegiatan</a>
-      <div class="content">
-        <a href="produksi.html">Perencanaan Produksi</a>
-        <a href="promosi.html">Perencanaan Promosi</a>
-        <a href="booth.html">Perencanaan Booth</a>
-      </div>
-    </div>
-    <div class="dropdown">
-      <a class="q" href="hasilkegiatan.html">Hasil Kegiatan</a>
-      <div class="content">
-        <a href="hasilkegiatan.html#laporanpelaksanaan">Laporan Pelaksanaan</a>
-        <a href="hasilkegiatan.html#laporankeuangan">Laporan Keuangan</a>
-        <a href="hasilkegiatan.html#statistik">Statistik Jualan</a>
-        <a href="hasilkegiatan.html#bioteknologi">Video Bioteknologi</a>
-      </div>
-    </div>
-    <div class="dropdown">
-      <a class="q" href="refleksi.html">Refleksi Kegiatan</a>
-      <div class="content">
-        <a href="refleksi.html#agama">Refleksi Agama</a>
-        <a href="refleksi.html#ppkn">Refleksi PPKn</a>
-      </div>
-    </div>
-    <div class="dropdown">
-      <a class="q" href="penutup.html">Penutup</a>
-      <div class="content">
-        <a href="penutup.html#kesimpulan">Kesimpulan</a>
-        <a href="penutup.html#saran">Saran</a>
-        <a href="penutup.html#daftarpustaka">Daftar Pustaka</a>
-      </div>
-    </div>
-    <div class="dropdown">
-      <a class="q" href="lampiran.html">Lampiran</a>
-      </div>
-    </div>
-    <a class="q" href="ppt.html">PPT</a>
-  </nav>
-  <style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f8f0e5;
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lampiran - Dokumentasi & Struk</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Grandstander:ital,wght@0,100..900;1,100..900&family=Lexend+Deca:wght@100..900&family=Londrina+Solid:wght@100;300;400;900&family=Mochiy+Pop+One&family=Pangolin&family=Preahvihear&family=Spicy+Rice&display=swap" rel="stylesheet">
+    <style>
+      /* Contoh CSS sederhana (ambil sebagian dari style.css yang sudah dikirim) */
+      body {
+        margin: 0;
+        padding: 0;
+        opacity: 0;
+        animation: fadeIn 2s forwards;
+        background-image: url(bg.gif);
+        background-size: cover;
+        background-repeat: no-repeat;
         text-align: center;
-    }
-    .gallery {
+        font-family: "Lexend Deca", sans-serif;
+      }
+      @keyframes fadeIn {
+        to { opacity: 1; }
+      }
+      nav {
+        margin: 20px auto;
+        background-color: #A7D7A7;
+        padding: 15px 30px;
+        border-radius: 50px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        white-space: nowrap;
+        opacity: 1;
+      }
+      nav a {
+        color: #4B6043;
+        font-weight: bold;
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+      }
+      nav a:hover {
+        color: #d0f4d0;
+      }
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      .dropdown .content {
+        display: none;
+        position: absolute;
+        background-color: #D7E7C9;
+        min-width: 200px;
+        border-radius: 10px;
+        box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        overflow: hidden;
+      }
+      .dropdown .content a {
+        color: #2F4F2F;
+        padding: 12px 16px;
+        display: block;
+        text-align: left;
+        transition: background-color 0.3s ease;
+      }
+      .dropdown .content a:hover {
+        background-color: #9DC88D;
+        color: #ffffff;
+      }
+      .dropdown:hover .content {
+        display: block;
+      }
+      .section-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 40px 0 20px;
+        color: #3D2907;
+      }
+      .slideshow-container {
+        position: relative;
+        width: 300px;
+        height: 533px;
+        margin: 0 auto 40px;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+      .slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+      .slides img {
+        width: 300px;
+        height: 533px;
+        object-fit: cover;
+      }
+      .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        border-radius: 50%;
+        font-size: 1.5rem;
+      }
+      .prev { left: 10px; }
+      .next { right: 10px; }
+      .prev:hover, .next:hover {
+        background: rgba(0, 0, 0, 0.7);
+      }
+      .progress-bar {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 2px;
+      }
+      .progress {
+        height: 100%;
+        width: 0;
+        background: white;
+        transition: width 3s linear;
+      }
+      .photo-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 10px;
-        padding: 20px;
-    }
-    .gallery img {
-        width: 250px;
-        height: 300px;
-        object-fit: cover;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: transform 0.3s;
-    }
-    .gallery img:hover {
-        transform: scale(1.1);
-    }
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 1000;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        justify-content: center;
-        align-items: center;
-    }
-    .modal img {
-        max-width: 90%;
-        max-height: 90%;
+        gap: 15px;
+        margin: 20px auto;
+      }
+      .photo-container img {
+        width: 150px;
+        height: auto;
+        border: 3px solid #d4a373;
         border-radius: 10px;
-    }
-    .close {
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+      .photo-container img:hover {
+        transform: scale(1.5);
+        box-shadow: 5px 5px 15px rgba(193, 11, 72, 0.2);
+      }
+      .back-button {
         position: absolute;
         top: 20px;
-        right: 30px;
-        font-size: 30px;
+        left: 20px;
+        background: rgba(0, 0, 0, 0.6);
         color: white;
-        cursor: pointer;
-    }
-</style>
-</head>
-<body>
-    <div class="pendahuluan-teks">
-        <h1>✮⋆˙ Lampiran ✮⋆˙</h1>
+        padding: 10px 15px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <a class="logo-container" href="index.html">
+        <img src="Screenshot_2025-02-14_122525-removebg-preview.png" alt="Home.png">
+        <div class="overlay">Home</div>
+      </a>
+      <a class="q" href="abstrak.html">Abstract</a>
+      <div class="dropdown">
+        <a class="q" href="pendahuluan.html">Pendahuluan</a>
+        <div class="content">
+          <a href="pendahuluan.html#latar-belakang">Latar Belakang</a>
+          <a href="pendahuluan.html#tujuan">Tujuan</a>
+          <a href="pendahuluan.html#manfaat">Manfaat</a>
         </div>
-<div class="gallery">
-    <img src="dokumentasi proses 1.jpg" alt="Gambar 1" onclick="openModal(this.src)">
-    <img src="dokumentasi proses 2.jpg" alt="Gambar 2" onclick="openModal(this.src)">
-    <img src="dokumentasi proses 3.jpg" alt="Gambar 3" onclick="openModal(this.src)">
-    <img src="foto1.jpg" alt="Gambar 4" onclick="openModal(this.src)">
-    <img src="foto2.jpg" alt="Gambar 4" onclick="openModal(this.src)">
-    <img src="foto3.jpg" alt="Gambar 4" onclick="openModal(this.src)">
-    <img src="foto4.jpg" alt="Gambar 4" onclick="openModal(this.src)">
-    <img src="foto5.jpg" alt="Gambar 4" onclick="openModal(this.src)">
-    <img src="foto6.jpg" alt="Gambar 4" onclick="openModal(this.src)">
-</div>
+      </div>
+      <div class="dropdown">
+        <a class="q" href="produksi.html">Rencana Kegiatan</a>
+        <div class="content">
+          <a href="produksi.html">Perencanaan Produksi</a>
+          <a href="promosi.html">Perencanaan Promosi</a>
+          <a href="booth.html">Perencanaan Booth</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a class="q" href="hasilkegiatan.html">Hasil Kegiatan</a>
+        <div class="content">
+          <a href="hasilkegiatan.html#laporanpelaksanaan">Laporan Pelaksanaan</a>
+          <a href="hasilkegiatan.html#laporankeuangan">Laporan Keuangan</a>
+          <a href="hasilkegiatan.html#statistik">Statistik Jualan</a>
+          <a href="hasilkegiatan.html#bioteknologi">Video Bioteknologi</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a class="q" href="refleksi.html">Refleksi Kegiatan</a>
+        <div class="content">
+          <a href="refleksi.html#agama">Refleksi Agama</a>
+          <a href="refleksi.html#ppkn">Refleksi PPKn</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a class="q" href="penutup.html">Penutup</a>
+        <div class="content">
+          <a href="penutup.html#kesimpulan">Kesimpulan</a>
+          <a href="penutup.html#saran">Saran</a>
+          <a href="penutup.html#daftarpustaka">Daftar Pustaka</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a class="q" href="lampiran.html">Lampiran</a>
+        </div>
+      </div>
+      <a class="q" href="ppt.html">PPT</a>
+    </nav>
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #f8f0e5;
+          text-align: center;
+      }
+      .gallery {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 10px;
+          padding: 20px;
+      }
+      .gallery img {
+          width: 250px;
+          height: 300px;
+          object-fit: cover;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: transform 0.3s;
+      }
+      .gallery img:hover {
+          transform: scale(1.1);
+      }
+      .modal {
+          display: none;
+          position: fixed;
+          z-index: 1000;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.8);
+          justify-content: center;
+          align-items: center;
+      }
+      .modal img {
+          max-width: 90%;
+          max-height: 90%;
+          border-radius: 10px;
+      }
+      .close {
+          position: absolute;
+          top: 20px;
+          right: 30px;
+          font-size: 30px;
+          color: white;
+          cursor: pointer;
+      }
+  </style>
+  </head>
+  <body>
+      <div class="pendahuluan-teks">
+          <h1>✮⋆˙ Lampiran ✮⋆˙</h1>
+          </div>
+    <div class="gallery">
+        <img src="dokumentasi proses 1.jpg" alt="Gambar 1" onclick="openModal(this.src)">
+        <img src="dokumentasi proses 2.jpg" alt="Gambar 2" onclick="openModal(this.src)">
+        <img src="dokumentasi proses 3.jpg" alt="Gambar 3" onclick="openModal(this.src)">
+        <img src="foto1.jpg" alt="Gambar 4" onclick="openModal(this.src)">
+        <img src="foto2.jpg" alt="Gambar 4" onclick="openModal(this.src)">
+        <img src="foto3.jpg" alt="Gambar 4" onclick="openModal(this.src)">
+        <img src="foto4.jpg" alt="Gambar 4" onclick="openModal(this.src)">
+        <img src="foto5.jpg" alt="Gambar 4" onclick="openModal(this.src)">
+        <img src="foto6.jpg" alt="Gambar 4" onclick="openModal(this.src)">
+    </div>
 
-<div class="modal" id="modal">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <img id="modal-img" src="" alt="">
-</div>
+    <div class="modal" id="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modal-img" src="" alt="">
+    </div>
 
-<div>
-  <h2>Procedure Text - Batik Ribbon</h2>
-  <p>Batik ribbon is a ribbon made from batik, a type of cloth with a patterned design. 
-    It is made by applying wax to cloth to prevent dye absorption, then the wax is removed 
-    to create a patterned negative. Moreover, batik cloth provides education about the richness 
-    of the archipelago's batik motifs. This product was chosen because batik ribbons are elegant 
-    and culturally the combination between traditional in style and modern in function which is 
-    now favored by all women in all professions. 
-  </p>
-  <img src="" alt="">
-  <h3>Tools and Materials:</h3>
-  <ul>
-    <li>Fabric scissors</li>
-    <li>Sewing thread</li>
-    <li>Dress meter</li>
-    <li>Glue gun</li>
-    <li>Sewing machine</li>
-    <li>Batik fabric</li>
-    <li>Sewing needles</li>
-    <li>Iron</li>
-    <li>Ruler</li>
-    <li>Pencil</li>
-    <li>Bread paper</li>
-    <li>Straight pins</li>
-    <li>Plain hair clip</li>
-  </ul>
-  <h3>Process:</h3>
-  <ol>
-    <li>The necessary tools and materials are prepared.</li>
-    <li>Two hairband fabric patterns are drawn on baking paper with sizes (68x18 cm) and (12x8 cm).</li>
-    <li>The pattern is cut according to the measurements.</li>
-    <li>The pattern is traced onto the fabric and is pinned with needles.</li>
-    <li>The fabric is cut into two pieces following the traced pattern.</li>
-    <li>The needles and baking paper are removed from the cut fabric.</li>
-    <li>The batik fabric is folded vertically with the motif facing outward.</li>
-    <li>A 3 cm diagonal cut is made on both the right and left sides of the larger fabric piece.</li>
-    <li>The fabric is sewn from the 3 cm cut on the left towards the center, and then the stitching 
-      is continued to the end.
-    </li>
-    <li>The fabric is folded into a shape resembling a scarf.</li>
-    <li>A long thread is cut and is sewn upwards from the bottom of the fold through the ruffles, shaping 
-      the ribbon.
-    </li>
-    <li>The remaining thread is wound around the center of the ribbon shape.</li>
-    <li>The second piece of fabric is bound together.</li>
-    <li>The tied fabric is attached to the front center of the ribbon using a hot glue gun.</li>
-    <li>The top and bottom of the glued fabric are secured to the back of the ribbon.</li>
-    <li>A clasp is attached to the center of the back of the ribbon with hot glue.</li>
-    <li>The bottom of the ribbon is sewn using a trail stitch or a sewing machine.</li>
-  </ol>
-</div>
-
-<script>
-    function openModal(src) {
-        document.getElementById("modal").style.display = "flex";
-        document.getElementById("modal-img").src = src;
-    }
-    function closeModal() {
-        document.getElementById("modal").style.display = "none";
-    }
-</script>
-</body>
+    <section id="teks-prosedur">
+      <div class="prosedur-prakarya">
+        <h2>Procedure Text - Batik Ribbon</h2>
+        <p>Batik ribbon is a ribbon made from batik, a type of cloth with a patterned design. 
+          It is made by applying wax to cloth to prevent dye absorption, then the wax is removed 
+          to create a patterned negative. Moreover, batik cloth provides education about the richness 
+          of the archipelago's batik motifs. This product was chosen because batik ribbons are elegant 
+          and culturally the combination between traditional in style and modern in function which is 
+          now favored by all women in all professions. 
+        </p>
+        <img src="pitabatik.png" alt="batikribbon.png">
+        <h3>Tools and Materials:</h3>
+        <ul>
+          <li>Fabric scissors</li>
+          <li>Sewing thread</li>
+          <li>Dress meter</li>
+          <li>Glue gun</li>
+          <li>Sewing machine</li>
+          <li>Batik fabric</li>
+          <li>Sewing needles</li>
+          <li>Iron</li>
+          <li>Ruler</li>
+          <li>Pencil</li>
+          <li>Bread paper</li>
+          <li>Straight pins</li>
+          <li>Plain hair clip</li>
+        </ul>
+        <h3>Process:</h3>
+        <ol>
+          <li>The necessary tools and materials are prepared.</li>
+          <li>Two hairband fabric patterns are drawn on baking paper with sizes (68x18 cm) and (12x8 cm).</li>
+          <li>The pattern is cut according to the measurements.</li>
+          <li>The pattern is traced onto the fabric and is pinned with needles.</li>
+          <li>The fabric is cut into two pieces following the traced pattern.</li>
+          <li>The needles and baking paper are removed from the cut fabric.</li>
+          <li>The batik fabric is folded vertically with the motif facing outward.</li>
+          <li>A 3 cm diagonal cut is made on both the right and left sides of the larger fabric piece.</li>
+          <li>The fabric is sewn from the 3 cm cut on the left towards the center, and then the stitching 
+            is continued to the end.
+          </li>
+          <li>The fabric is folded into a shape resembling a scarf.</li>
+          <li>A long thread is cut and is sewn upwards from the bottom of the fold through the ruffles, shaping 
+            the ribbon.
+          </li>
+          <li>The remaining thread is wound around the center of the ribbon shape.</li>
+          <li>The second piece of fabric is bound together.</li>
+          <li>The tied fabric is attached to the front center of the ribbon using a hot glue gun.</li>
+          <li>The top and bottom of the glued fabric are secured to the back of the ribbon.</li>
+          <li>A clasp is attached to the center of the back of the ribbon with hot glue.</li>
+          <li>The bottom of the ribbon is sewn using a trail stitch or a sewing machine.</li>
+        </ol>
+      </div>
+      <div class="prosedur-biotech">
+        <h2>Procedure Text - Ecolush Balm</h2>
+        <p>This product was chosen because lip balm is a widely used cosmetic product that can be made using 
+          eco-friendly and biodegradable ingredients. By utilizing natural oils and beeswax, this lip balm 
+          minimizes synthetic chemicals, making it safer for both users and the environment.
+        </p>
+        <img src="lipbalm.png" alt="ecolushbalm.png">
+        <h3>Tools and Materials:</h3>
+        <ul>
+          <li>Coconut oil (1 tbsp)</li>
+          <li>Shea butter (1 ½ tsp)</li>
+          <li>Olive oil (1 tbsp)</li>
+          <li>1 tsp cosmetic-grade dye</li>
+          <li>Beeswax (5-8 gr/ 2 tbsp)</li>
+          <li>Chopstick</li>
+          <li>Wooden spoon</li>
+          <li>Aluminum bowl</li>
+          <li>Pan</li>
+          <li>Scales</li>
+          <li>Spoon</li>
+          <li>Lip balm tube</li>
+        </ul>
+        <h3>Process:</h3>
+        <ol>
+          <li>In a shallow bowl, water is added up to 2-3 inches.</li>
+          <li>The beeswax is melted by simmering it in water in a measuring cup or any glass jar. Stir with 
+            a wooden stick until it is completely melted.
+          </li>
+          <li>Shea butter and coconut oil are added to the mixture, and everything is melted together. Once 
+            fully melted, the mixture is removed from the heat.
+          </li>
+          <li>Essential oils and cosmetic dye are mixed into the blend.</li>
+          <li>The liquid mixture is poured into lip balm tubes and left to cool at room temperature until it hardens.</li>
+        </ol>
+      </div>
+    </section>
+  <script>
+      function openModal(src) {
+          document.getElementById("modal").style.display = "flex";
+          document.getElementById("modal-img").src = src;
+      }
+      function closeModal() {
+          document.getElementById("modal").style.display = "none";
+      }
+  </script>
+  </body>
 </html>
