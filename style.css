@@ -1532,14 +1532,14 @@ video:hover {
 .untungrugi{
     background-color: #4F7942;
     width: 800px;
-    height: 300px;
+    height: 400px;
     margin: auto;
     padding: 10px;
 }
 
 .untungrugi img{
     width: 750px;
-    height: 300px;
+    height: 400px;
     transition: all 0.4s ease-in-out;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
