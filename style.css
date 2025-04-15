@@ -712,7 +712,7 @@ button {
     left: 50%;
     transform: translateX(-50%);
     animation: goyang 3s ease-in-out infinite alternate;
-    top: 500px;
+    top: 1000px;
 }
 
 .ilustrasi-bawah {
@@ -795,7 +795,7 @@ button {
     background: #fffed0; /* Mustard yellow */
     border-radius: 15px;
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
-    text-align: left;
+    text-align: justify;
     transition: all 0.3s ease-in-out;
     font-family: "Pangolin", sans-serif;
     font-size: 18px;
