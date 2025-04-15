@@ -1721,22 +1721,14 @@ video:hover {
     color: #3a7d44; /* Warna hijau fresh */
 }
 
-/* Penjelasan Ayat (Default Tersembunyi) */
+/* Penjelasan Ayat */
 .ayat-container li p:last-child {
-    display: none;
+    display: block;
     font-size: 16px;
     color: #4a3b2f;
-    margin-top: 5px; /* Gap kecil */
-    opacity: 0;
+    margin-top: 5px;
     transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
-    max-height: 0;
     overflow: hidden;
-}
-
-.ayat-container li:hover p:last-child {
-    display: block;
-    opacity: 1;
-    max-height: 200px;
 }
 
 .ayat-container li:hover {
